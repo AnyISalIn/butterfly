@@ -736,7 +736,7 @@
     return img.src = href;
   };
 
-  _theme = typeof localStorage !== "undefined" && localStorage !== null ? localStorage.getItem('theme') : void 0;
+  _theme = typeof localStorage !== "undefined" && localStorage !== null ? localStorage.getItem('butterfly-theme') : void 0;
 
   if (_theme) {
     _set_theme_href(_theme);
@@ -745,7 +745,7 @@
   this.set_theme = function(theme) {
     _theme = theme;
     if (typeof localStorage !== "undefined" && localStorage !== null) {
-      localStorage.setItem('theme', theme);
+      localStorage.setItem('butterfly-theme', theme);
     }
     if (theme) {
       return _set_theme_href(theme);

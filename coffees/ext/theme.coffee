@@ -5,12 +5,12 @@ _set_theme_href = (href) ->
     setTimeout (-> butterfly?.resize()), 250
   img.src = href
 
-_theme = localStorage?.getItem('theme')
+_theme = localStorage?.getItem('butterfly-theme')
 _set_theme_href(_theme) if _theme
 
 @set_theme = (theme) ->
   _theme = theme
-  localStorage?.setItem('theme', theme)
+  localStorage?.setItem('butterfly-theme', theme)
   _set_theme_href(theme) if theme
 
 document.addEventListener 'keydown', (e) ->
